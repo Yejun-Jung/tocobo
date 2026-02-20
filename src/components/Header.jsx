@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import Util from "./Util";
 import { headerData } from "../util/header";
+import "./styles/Header.scss";
 
 const Header = () => {
   const headerLogo = headerData.logo;

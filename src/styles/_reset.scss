@@ -65,10 +65,21 @@ button {
 
 section {
   min-height: 100vh;
+    &:nth-child(odd) {
+        background-color: sandybrown;
+    }
 }
 
 ul,
 ol,
 dl {
   list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
 }

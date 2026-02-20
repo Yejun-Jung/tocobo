@@ -5,11 +5,13 @@ const Util = () => {
   const { utils } = headerData;
 
   return (
-    <ul className="inner">
-      {utils.map((item) => (
-        <a href={item.href}>
-          <img src={item.icon} alt={item.label} />
-        </a>
+    <ul className="util-list">
+      {utils.map((u) => (
+        <li key={u.id}>
+          <a href={u.href}>
+            <img src={u.icon} alt={u.label} />
+          </a>
+        </li>
       ))}
     </ul>
   );
