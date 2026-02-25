@@ -13,6 +13,7 @@
     width: 5.6rem;
     height: 5.6rem;
     background: var(--primary) url(/img/icon_top.svg) center/40% no-repeat;
+    background-color: var(--main-slider01-tit);
     border-radius: 50%;
     cursor: pointer;
     font-size: 0;
@@ -26,7 +27,7 @@
     color: var(--bg);
     align-content: center;
 }
-p {
+.FixedTopBtn p {
     color: var(--primary);
     font-family: 'Source Serif 4', serif;
     font-style: italic;
