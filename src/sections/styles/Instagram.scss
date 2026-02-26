@@ -1,24 +1,25 @@
-.instar-inner {
-    
+.instar-inner{
     h2.tit {
         color: var(--primary);
-        font-size: 5.5rem;
     }
     p.txt {
-        margin-top: 2rem;
-        color: var(--muted);
-        font-family: 'Source Serif Pro', serif;
+        font-family: 'Source Serif Pro',serif;
+        font-size: 2rem;
+        font-style: italic;
     }
 
-    .instar-list {
-        margin-top: 4rem;
+    .instar-list{
         display: flex;
         gap: 1rem;
-
-        li {
-            width: 21rem;
-            height: 21rem;
-            overflow: hidden;
+        margin-top: 4rem;
+        li{
+            flex:1;
+            a{
+                display: block;
+                height: 21rem;
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 }
