@@ -1,36 +1,42 @@
-import React, { useRef, useEffect } from "react";
-import { collectionData } from "../util/collection";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Navigation } from "swiper/modules";
-import "./styles/Collection.scss";
-
+import React, { useRef, useEffect } from 'react'
+import { collectionData } from '../util/collection'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Navigation } from 'swiper/modules';
+import './styles/Collection.scss'
 const Collection = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const swiperRef = useRef(null);
+
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
+  const swiperRef = useRef(null)
 
   useEffect(() => {
-    if (
-      swiperRef.current &&
+
+    if (swiperRef.current &&
       swiperRef.current.params &&
       prevRef.current &&
       nextRef.current
     ) {
-      swiperRef.current.params.navigation.prevEl = prevRef.current;
-      swiperRef.current.params.navigation.nextEl = nextRef.current;
-      swiperRef.current.navigation.destroy();
-      swiperRef.current.navigation.init();
-      swiperRef.current.navigation.update();
+      swiperRef.current.params.navigation.prevEl = prevRef.current
+      swiperRef.current.params.navigation.nextEl = nextRef.current
+      swiperRef.current.navigation.destroy()
+      swiperRef.current.navigation.init()
+      swiperRef.current.navigation.update()
     }
-  }, []);
+
+  }, [])
 
   return (
-    <div className="inner collection-inner">
+    <div className='inner collection-inner'>
+
       <div className="t-wrap">
-        <h2 className="tit">TOCOBO COLLECTION</h2>
-        <p className="txt">Shop By Category</p>
+        <h2 className="tit">
+          TOCOBO COLLECTION
+        </h2>
+        <p className="txt">
+          Shop By Category
+        </p>
       </div>
 
       <Swiper
@@ -38,7 +44,7 @@ const Collection = () => {
         spaceBetween={30}
         loop={true}
         pagination={{
-          type: "progressbar",
+          type: 'progressbar'
         }}
         modules={[Pagination, Navigation]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -48,9 +54,15 @@ const Collection = () => {
           <SwiperSlide key={i}>
             <a href="#">
               <div className="info-wrap">
-                <div className="info-tit">{sl.title}</div>
-                <div className="name">{sl.name}</div>
-                <div className="k-name">{sl.kname}</div>
+                <div className="info-tit">
+                  {sl.title}
+                </div>
+                <div className="name">
+                  {sl.name}
+                </div>
+                <div className="k-name">
+                  {sl.kname}
+                </div>
               </div>
               <div className="img-wrap">
                 <img src={sl.image} alt={sl.name} />
@@ -59,21 +71,18 @@ const Collection = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <a href="#" 
+      className='prev'
+      onClick={(e)=>e.preventDefault()} 
+      ref={prevRef}>prev</a>
+      <a 
+      href="#" 
+      onClick={(e)=>e.preventDefault()} 
+      className='next' 
+      ref={nextRef}>next</a>
 
-      <a
-        href="#"
-        className="prev"
-        onClick={(e) => e.preventDefault()}
-        ref={prevRef}
-      ></a>
-      <a
-        href="#"
-        onClick={(e) => e.preventDefault()}
-        className="next"
-        ref={nextRef}
-      ></a>
     </div>
-  );
-};
+  )
+}
 
-export default Collection;
+export default Collection

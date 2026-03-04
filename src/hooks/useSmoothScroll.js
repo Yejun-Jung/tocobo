@@ -1,10 +1,10 @@
-import React, {useCallback} from 'react'
+import React,{useCallback} from 'react'
 
 export const useSmoothScroll = () => {
 
     const scrollTo = useCallback((id)=>{
 
-        const el = document.getElementById(id)
+     const el =document.getElementById(id)
 
         if(el){
             el.scrollIntoView({
@@ -13,7 +13,8 @@ export const useSmoothScroll = () => {
             })
         }
 
-    }, [])
+    },[])
 
   return scrollTo
 }
+

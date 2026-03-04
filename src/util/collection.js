@@ -52,3 +52,6 @@ export const collectionData = [
       image: img('product_7.png')
     }
   ]
+  
+  export default collectionData
+  

@@ -1,28 +1,26 @@
-import React from "react";
-import "./styles/FixedTopBtn.scss";
-import { useSmoothScroll } from "../hooks/useSmoothScroll";
-
+import React from 'react'
+import './styles/FixedTopBtn.scss'
+import { useSmoothScroll } from '../hooks/useSmoothScroll'
 const FixedTopBtn = () => {
-  const scrollTo = useSmoothScroll();
+    const scrollTo = useSmoothScroll()
+    return (
+        <div className='FixedTopBtn'>
+            <button
+            className='top-btn'
+                onClick={(e) => {
+                    e.preventDefault()
+                    scrollTo('hero')
+                }}
 
-  return (
-    <div className="FixedTopBtn">
-      <button
-        type="button"
-        className="top-btn"
-        onClick={(e) => {
-          e.preventDefault();
-          scrollTo("hero");
-        }}
-      >
-        위로 올라가는 버튼
-      </button>
-      <a href="#!" className="talk-btn">
-        TCB
-      </a>
-      <p>1:1 talk</p>
-    </div>
-  );
-};
+            >위로 올라가는 버튼</button>
+            <a href="#" className='talk-btn'>
+                TCB
+            </a>
+            <p>
+                1:1 talk
+            </p>
+        </div>
+    )
+}
 
-export default FixedTopBtn;
+export default FixedTopBtn

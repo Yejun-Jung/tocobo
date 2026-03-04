@@ -7,20 +7,19 @@
     height: 4rem;
     color: var(--bg);
     text-align: center;
-    align-content: center;
     z-index: 5;
     transition: all .3s;
-    .swiper {
+    .swiper{
         height: 100%;
         z-index: 0;
-        a {
+        a{
             align-content: center;
             display: block;
             height: 100%;
             font-size: 1.3rem;
         }
     }
-    .closeBtn {
+    .closeBtn{
         z-index: 3;
         position: absolute;
         right: 2rem;
@@ -28,5 +27,6 @@
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
+
     }
 }
