@@ -17,7 +17,7 @@ const Instargram = () => {
           style={{backgroundImage:`url(${i.image})`}}
 
           // 배경 넣어보기
-          >{i.id}</a>
+          ></a>
         </li>
         ))}
       </ul>
